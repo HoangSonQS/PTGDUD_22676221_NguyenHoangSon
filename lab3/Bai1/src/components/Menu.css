@@ -1,0 +1,134 @@
+.container {
+    width: 300px;
+    height: 800px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 10px;
+}
+
+#top {
+    height: auto;
+    font-weight: bold;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    padding: 0 10px;
+    align-items: center;
+}
+
+#top img {
+    width: 100%;
+    padding: 5px;
+}
+
+
+#top h3 {
+    margin: 0;
+    padding-left: 5px;
+}
+
+#type {
+    padding: 10px 10px;
+
+}
+
+#type b:first-child {
+    justify-self: start; 
+}
+
+#check {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4,auto);
+    gap: 10px 20px;
+    padding: 20px 20px;
+
+}
+#check label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+#check input[type="checkbox"]{
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+#check input[type="checkbox"]:checked{
+    accent-color: #ff69b4;
+}
+#Time{
+    padding: 20px 10px;
+    border: 1px solid rgb(180, 180, 180);
+    border-left: none;
+    border-right: none ;
+    
+}
+#title-header{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+#title-header b{
+    justify-self: end; 
+    margin-right: 0; 
+    padding-right: 0; 
+    cursor: pointer;
+    color: #ff69b4;
+    font-size: 20px;
+    font-weight: bold;
+}
+#minutes{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#Rating{
+    padding: 20px 10px;
+}
+#check-rating{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 10px;
+}
+#check-rating label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    cursor: pointer;
+}
+#check-rating input[type="checkbox"]{
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+#check-rating input[type="checkbox"]:checked{
+    accent-color: #ff69b4;
+}
+#footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-top: 1px solid  rgb(180, 180, 180);
+
+}
+#footer button {
+    margin: 20px auto;
+    padding: 10px 100px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid #ff69b4;
+    background-color: #ff69b4;
+    color: aliceblue;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+}
+
+#footer button:hover {
+    cursor: pointer;
+    border: 2px solid #ff6eb6;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}

@@ -1,0 +1,8 @@
+#Cus-Button {
+    border: none;
+    border-radius: 10px;   
+    margin: 10px;
+}
+#Cus-Button:hover{
+    cursor: pointer;
+}

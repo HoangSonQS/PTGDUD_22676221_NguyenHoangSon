@@ -1,0 +1,29 @@
+*{
+  padding: 0px;
+  margin: auto 0px;
+}
+.app-container{
+  width: 1200px;
+  margin: 0 auto; /* Căn giữa container trong trang */
+  
+}
+.header{
+  width: 100%;
+}
+.menu{
+  width: 30%;
+  height: auto;
+  float: left;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+.content{
+  float: left;
+  width: 60%;
+}
+.footer{
+  width: 100%;
+  border: 1px solid black;
+  clear: both;
+  
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Tính</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="number"], button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .operation {
+            margin: 10px 0;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Máy Tính</h2>
+    <input type="number" id="num1" placeholder="Nhập số thứ nhất">
+    <input type="number" id="num2" placeholder="Nhập số thứ hai">
+
+    <div class="operation">
+        <label><input type="radio" name="operation" value="add" checked> Cộng</label>
+        <label><input type="radio" name="operation" value="subtract"> Trừ</label>
+        <label><input type="radio" name="operation" value="multiply"> Nhân</label>
+        <label><input type="radio" name="operation" value="divide"> Chia</label>
+    </div>
+
+    <button onclick="calculate()">Tính Toán</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function calculate() {
+        // Lấy giá trị từ các ô nhập liệu
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+
+        // Lấy phép toán được chọn
+        const operation = document.querySelector('input[name="operation"]:checked').value;
+
+        let result;
+
+        // Thực hiện phép toán dựa trên lựa chọn
+        switch (operation) {
+            case 'add':
+                result = num1 + num2;
+                break;
+            case 'subtract':
+                result = num1 - num2;
+                break;
+            case 'multiply':
+                result = num1 * num2;
+                break;
+            case 'divide':
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    result = "Không thể chia cho 0";
+                }
+                break;
+            default:
+                result = "Phép toán không hợp lệ";
+        }
+
+        // Hiển thị kết quả
+        document.getElementById('result').innerText = `Kết quả: ${result}`;
+    }
+</script>
+
+</body>
+</html>
