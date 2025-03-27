@@ -1,0 +1,73 @@
+.footer{
+    height: 300px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+#about-us{
+    width: 50%;
+    float: left;
+    padding: 20px;
+
+}
+#about-us p {
+    padding: 20px 0px;
+}
+#input-email{
+    padding: 1% 30%;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+#btn-send{
+    padding: 1% 2%;
+    margin-left: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #ff69b4;
+}
+#btn-send:hover{
+    cursor: pointer;
+}
+#chefifyWhite{
+    width: 100%;
+    height: 60px;
+    margin-top: 9%;
+}
+#chefifyWhite img{
+    width: 30%;
+    float: left;
+}
+#chefifyWhite p{
+    margin-left: 20px;
+    float: left;
+}
+#learnMore{
+    width: 19%;
+    float: left;
+    padding: 20px;
+}
+
+#learnMore p{
+    margin-top: 10px;
+}
+#learnMore p a{
+    text-decoration: none;
+    color: darkgray;
+}
+#shop{
+    margin-top: 45px;
+}
+#recipes{
+    width: 20%;
+    float: left;
+    padding: 20px;
+
+}
+#recipes p a{
+    text-decoration: none;
+    color: darkgray;
+}
+#recipes p {
+    margin-top: 11px;
+}
