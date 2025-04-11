@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useData } from './DataContext';
-import Modal from './Modal';
+import EditModal from './EditModal';
+import ImportModal from './ImportModal';
 import './DetailedReport.css';
+import download from "../assets/images/Download.png"
+import moveup from "../assets/images/Move up.png"
+import editIcon from "../assets/images/create.png"
 
 const DetailedReport = ({
   itemsPerPage = 5,
@@ -95,9 +99,10 @@ const DetailedReport = ({
         return ['id', 'month', 'amount', 'margin'];
       case 'customers':
       default:
-        return Object.keys(tableData[0]).filter(
+        const baseColumns = Object.keys(tableData[0]).filter(
           column => !excludeFields.includes(column)
         );
+        return [...baseColumns, 'actions'];
     }
   };
 
@@ -129,7 +134,16 @@ const DetailedReport = ({
   };
 
   const renderCellContent = (column, item) => {
-    const value = item[column];
+    if (column === 'actions') {
+      return (
+        <button 
+          onClick={() => handleEditClick(item)}
+          className="edit-btn"
+        >
+          <img src={editIcon} alt="Edit" style={{ width: '16px', height: '16px' }} />
+        </button>
+      );
+    }
 
     if (column === nameField && item[avatarField]) {
       return (
@@ -143,35 +157,36 @@ const DetailedReport = ({
               e.target.src = '/default-avatar.png';
             }}
           />
-          <span>{value}</span>
+          <span>{item[nameField]}</span>
         </div>
       );
     }
 
     if (column === statusField) {
       return (
-        <span className={`status ${value?.toLowerCase()}`}>
-          {value}
+        <span className={`status ${item[statusField]?.toLowerCase()}`}>
+          {item[statusField]}
         </span>
       );
     }
 
     if (column === 'amount') {
-      return formatCurrency(value);
+      return formatCurrency(item[column]);
     }
 
     if (column === 'change' || column === 'margin') {
-      return formatPercentage(value);
+      return formatPercentage(item[column]);
     }
 
     if (dateFields.includes(column)) {
-      return formatDate(value);
+      return formatDate(item[column]);
     }
 
-    return value !== null && value !== undefined ? value.toString() : '';
+    return item[column] !== null && item[column] !== undefined ? item[column].toString() : '';
   };
 
   const formatColumnName = (column) => {
+    if (column === 'actions') return 'Actions';
     return column
       .replace(/([A-Z])/g, ' $1')
       .replace(/_/g, ' ')
@@ -185,17 +200,6 @@ const DetailedReport = ({
   };
 
   const handleImport = () => {
-    if (activeFilter !== 'customers') {
-      alert('Import is only available for customer data');
-      return;
-    }
-    const emptyCustomer = Object.keys(tableData[0]).reduce((acc, key) => {
-      if (key !== 'id') {
-        acc[key] = '';
-      }
-      return acc;
-    }, {});
-    setNewCustomer(emptyCustomer);
     setIsImportModalOpen(true);
   };
 
@@ -265,34 +269,12 @@ const DetailedReport = ({
     }
   };
 
-  const handleImportChange = (e) => {
-    setNewCustomer({
-      ...newCustomer,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleImportSave = async (newUser) => {
-    try {
-      const response = await fetch('http://localhost:3001/customers', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newUser),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to create new customer');
-      }
-
-      const createdUser = await response.json();
-      updateData([...tableData, createdUser]);
-      setIsImportModalOpen(false);
-      setNewCustomer({});
-    } catch (error) {
-      console.error('Error importing customer:', error);
-      alert('Failed to import customer. Please try again.');
+  const handleImportSave = async () => {
+    // Refresh the data after saving
+    if (activeFilter === 'customers') {
+      const response = await fetch('http://localhost:3001/customers');
+      const data = await response.json();
+      updateData(data);
     }
   };
 
@@ -307,12 +289,18 @@ const DetailedReport = ({
         </h2>
         <div className="report-actions">
           {activeFilter === 'customers' && (
-            <button onClick={handleImport} className="btn btn-import">
-              <span>↓</span> Import
+            <button
+              onClick={handleImport}
+              className="btn btn-import"
+            >
+              <img src={download} alt="" /> Import
             </button>
           )}
-          <button onClick={handleExport} className="btn btn-export">
-            <span>↑</span> Export
+          <button
+            onClick={handleExport}
+            className="btn btn-export"
+          >
+            <img src={moveup} alt="" /> Export
           </button>
         </div>
       </div>
@@ -322,21 +310,18 @@ const DetailedReport = ({
           <thead>
             <tr>
               {columns.map((column) => (
-                <th key={column}>{column}</th>
+                <th key={column}>{formatColumnName(column)}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {currentItems.map((item, index) => (
               <tr key={index}>
-                {Object.keys(item).map((key) => {
-                  if (excludeFields.includes(key)) return null;
-                  return (
-                    <td key={key}>
-                      {renderCellContent(key, item)}
-                    </td>
-                  );
-                })}
+                {columns.map((column) => (
+                  <td key={column}>
+                    {renderCellContent(column, item)}
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>
@@ -379,25 +364,19 @@ const DetailedReport = ({
       )}
 
       {isModalOpen && (
-        <Modal
+        <EditModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           onSave={handleSave}
           user={selectedItem}
-          onChange={handleChange}
         />
       )}
       
-      {isImportModalOpen && (
-        <Modal
-          isOpen={isImportModalOpen}
-          onClose={() => setIsImportModalOpen(false)}
-          onSave={handleImportSave}
-          user={newCustomer}
-          onChange={handleImportChange}
-          title="Add New Customer"
-        />
-      )}
+      <ImportModal
+        isOpen={isImportModalOpen}
+        onClose={() => setIsImportModalOpen(false)}
+        onSave={handleImportSave}
+      />
     </div>
   );
 };

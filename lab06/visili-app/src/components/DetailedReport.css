@@ -62,13 +62,12 @@
 }
 
 .btn-import, .btn-export {
-  background-color: #ec4899;
-  color: white;
-  border: none;
+  background-color: white;
+  color:#db2777;
 }
 
 .btn-import:hover, .btn-export:hover {
-  background-color: #db2777;
+  background-color: #f9fafb;
 }
 
 .btn span {
@@ -180,15 +179,26 @@ tbody tr:hover {
   background: none;
   border: none;
   cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s;
-  padding: 0.25rem;
+  padding: 8px;
   border-radius: 4px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .edit-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.edit-btn img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+
+.edit-btn:hover img {
   opacity: 1;
-  background-color: #f0f0f0;
 }
 
 /* Remove any fixed heights or overflow restrictions */
