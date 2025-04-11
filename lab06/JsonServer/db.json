@@ -1,0 +1,513 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "name": "Avatar.png",
+      "url": "/images/Avatar.png"
+    },
+    {
+      "id": 2,
+      "name": "Avatar (1).png",
+      "url": "/images/Avatar(1).png"
+    },
+    {
+      "id": 3,
+      "name": "Avatar (2).png",
+      "url": "/images/Avatar(2).png"
+    },
+    {
+      "id": 4,
+      "name": "Avatar (3).png",
+      "url": "/images/Avatar(3).png"
+    },
+    {
+      "id": 5,
+      "name": "Avatar (4).png",
+      "url": "/images/Avatar(4).png"
+    },
+    {
+      "id": 6,
+      "name": "Avatar (5).png",
+      "url": "/images/Avatar(5).png"
+    },
+    {
+      "id": 7,
+      "name": "Avatar313.png",
+      "url": "/images/Avatar313.png"
+    },
+    {
+      "id": 8,
+      "name": "Bell1.png",
+      "url": "/images/Bell1.png"
+    },
+    {
+      "id": 9,
+      "name": "Button1509.png",
+      "url": "/images/Button1509.png"
+    },
+    {
+      "id": 10,
+      "name": "Button1529.png",
+      "url": "/images/Button1529.png"
+    },
+    {
+      "id": 11,
+      "name": "Button1530.png",
+      "url": "/images/Button1530.png"
+    },
+    {
+      "id": 12,
+      "name": "Chat.png",
+      "url": "/images/Chat.png"
+    },
+    {
+      "id": 13,
+      "name": "Code.png",
+      "url": "/images/Code.png"
+    },
+    {
+      "id": 14,
+      "name": "create.png",
+      "url": "/images/create.png"
+    },
+    {
+      "id": 15,
+      "name": "Download.png",
+      "url": "/images/Download.png"
+    },
+    {
+      "id": 16,
+      "name": "File text 1.png",
+      "url": "/images/Filetext1.png"
+    },
+    {
+      "id": 17,
+      "name": "Folder.png",
+      "url": "/images/Folder.png"
+    },
+    {
+      "id": 18,
+      "name": "Group.png",
+      "url": "/images/Group.png"
+    },
+    {
+      "id": 19,
+      "name": "Groups.png",
+      "url": "/images/Groups.png"
+    },
+    {
+      "id": 20,
+      "name": "Logo.png",
+      "url": "/images/Logo.png"
+    },
+    {
+      "id": 21,
+      "name": "Moveup.png",
+      "url": "/images/Moveup.png"
+    },
+    {
+      "id": 22,
+      "name": "Piechart.png",
+      "url": "/images/Piechart.png"
+    },
+    {
+      "id": 23,
+      "name": "Question1.png",
+      "url": "/images/Question1.png"
+    },
+    {
+      "id": 24,
+      "name": "Search.png",
+      "url": "/images/Search.png"
+    },
+    {
+      "id": 25,
+      "name": "Squaresfour1.png",
+      "url": "/images/Squaresfour1.png"
+    }
+  ],
+  "turnover": [
+    {
+      "id": 1,
+      "month": "January",
+      "amount": 77003,
+      "change": 0
+    },
+    {
+      "id": 2,
+      "month": "February",
+      "amount": 80350,
+      "change": 2.74
+    },
+    {
+      "id": 3,
+      "month": "March",
+      "amount": 82500,
+      "change": 2.67
+    },
+    {
+      "id": 4,
+      "month": "April",
+      "amount": 86000,
+      "change": 4.24
+    },
+    {
+      "id": 5,
+      "month": "May",
+      "amount": 89200,
+      "change": 3.72
+    },
+    {
+      "id": 6,
+      "month": "June",
+      "amount": 92405,
+      "change": 3.59
+    },
+    {
+      "id": 7,
+      "month": "July",
+      "amount": 94850,
+      "change": 2.64
+    },
+    {
+      "id": 8,
+      "month": "August",
+      "amount": 97000,
+      "change": 2.54
+    },
+    {
+      "id": 9,
+      "month": "September",
+      "amount": 99500,
+      "change": 2.58
+    },
+    {
+      "id": 10,
+      "month": "October",
+      "amount": 102300,
+      "change": 2.82
+    },
+    {
+      "id": 11,
+      "month": "November",
+      "amount": 105100,
+      "change": 2.73
+    },
+    {
+      "id": 12,
+      "month": "December",
+      "amount": 109000,
+      "change": 3.71
+    }
+  ],
+  "profit": [
+    {
+      "id": 1,
+      "month": "January",
+      "amount": 17120,
+      "margin": 21.9
+    },
+    {
+      "id": 2,
+      "month": "February",
+      "amount": 18560,
+      "margin": 23.1
+    },
+    {
+      "id": 3,
+      "month": "March",
+      "amount": 19800,
+      "margin": 24
+    },
+    {
+      "id": 4,
+      "month": "April",
+      "amount": 21500,
+      "margin": 25
+    },
+    {
+      "id": 5,
+      "month": "May",
+      "amount": 23400,
+      "margin": 26.2
+    },
+    {
+      "id": 6,
+      "month": "June",
+      "amount": 24820,
+      "margin": 26.9
+    },
+    {
+      "id": 7,
+      "month": "July",
+      "amount": 25650,
+      "margin": 27
+    },
+    {
+      "id": 8,
+      "month": "August",
+      "amount": 26520,
+      "margin": 27.3
+    },
+    {
+      "id": 9,
+      "month": "September",
+      "amount": 27660,
+      "margin": 27.8
+    },
+    {
+      "id": 10,
+      "month": "October",
+      "amount": 28880,
+      "margin": 28.2
+    },
+    {
+      "id": 11,
+      "month": "November",
+      "amount": 30030,
+      "margin": 28.6
+    },
+    {
+      "id": 12,
+      "month": "December",
+      "amount": 31950,
+      "margin": 29.3
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hoàng Sơn",
+      "company": "Viettel solutionsolution",
+      "orderValue": "600",
+      "orderDate": "2023-03-24",
+      "status": "New",
+      "avatar": "/images/Avatar.png"
+    },
+    {
+      "id": 2,
+      "name": "Carlos Garcia",
+      "company": "SmoozeShift",
+      "orderValue": 747,
+      "orderDate": "2023-07-24",
+      "status": "New",
+      "avatar": "/images/Avatar(1).png"
+    },
+    {
+      "id": 3,
+      "name": "Elizabeth Bailey",
+      "company": "Prime Time Telecom",
+      "orderValue": 564,
+      "orderDate": "2023-08-08",
+      "status": "In-progress",
+      "avatar": "/images/Avatar(2).png"
+    },
+    {
+      "id": 4,
+      "name": "Ryan Brown",
+      "company": "OmniTech Corporation",
+      "orderValue": 541,
+      "orderDate": "2023-08-31",
+      "status": "In-progress",
+      "avatar": "/images/Avatar(3).png"
+    },
+    {
+      "id": 5,
+      "name": "Ryan Young",
+      "company": "DataStream Inc.",
+      "orderValue": 769,
+      "orderDate": "2023-05-01",
+      "status": "Completed",
+      "avatar": "/images/Avatar(4).png"
+    },
+    {
+      "id": 6,
+      "name": "Hailey Adams",
+      "company": "FlowRush",
+      "orderValue": 922,
+      "orderDate": "2023-06-10",
+      "status": "Completed",
+      "avatar": "/images/Avatar(5).png"
+    },
+    {
+      "id": 7,
+      "name": "Michael Chen",
+      "company": "CloudNova",
+      "orderValue": 689,
+      "orderDate": "2023-04-12",
+      "status": "Completed",
+      "avatar": "/images/Avatar313.png"
+    },
+    {
+      "id": 8,
+      "name": "Laura Kim",
+      "company": "InnoWave",
+      "orderValue": 478,
+      "orderDate": "2023-03-09",
+      "status": "New",
+      "avatar": "/images/Avatar(1).png"
+    },
+    {
+      "id": 9,
+      "name": "David Tran",
+      "company": "NeoLogix",
+      "orderValue": 512,
+      "orderDate": "2023-02-18",
+      "status": "In-progress",
+      "avatar": "/images/Avatar(2).png"
+    },
+    {
+      "id": 10,
+      "name": "Sophia Liu",
+      "company": "VisionSoft",
+      "orderValue": 834,
+      "orderDate": "2023-04-29",
+      "status": "Completed",
+      "avatar": "/images/Avatar(3).png"
+    },
+    {
+      "id": 11,
+      "name": "Daniel Walker",
+      "company": "BrightWave",
+      "orderValue": 602,
+      "orderDate": "2023-06-11",
+      "status": "New",
+      "avatar": "/images/Avatar(4).png"
+    },
+    {
+      "id": 12,
+      "name": "Emma Jones",
+      "company": "QuickStream",
+      "orderValue": 705,
+      "orderDate": "2023-09-01",
+      "status": "In-progress",
+      "avatar": "/images/Avatar(5).png"
+    },
+    {
+      "id": 13,
+      "name": "Liam Scott",
+      "company": "NetFusion",
+      "orderValue": 833,
+      "orderDate": "2023-10-15",
+      "status": "Completed",
+      "avatar": "/images/Avatar.png"
+    },
+    {
+      "id": 14,
+      "name": "Olivia Evans",
+      "company": "DataGenix",
+      "orderValue": 618,
+      "orderDate": "2023-11-05",
+      "status": "In-progress",
+      "avatar": "/images/Avatar(1).png"
+    },
+    {
+      "id": 15,
+      "name": "Noah Thomas",
+      "company": "CyberEdge",
+      "orderValue": 487,
+      "orderDate": "2023-12-20",
+      "status": "New",
+      "avatar": "/images/Avatar(2).png"
+    },
+    {
+      "id": 16,
+      "name": "Ava Davis",
+      "company": "SkyMatrix",
+      "orderValue": 933,
+      "orderDate": "2023-11-19",
+      "status": "Completed",
+      "avatar": "/images/Avatar(3).png"
+    },
+    {
+      "id": 17,
+      "name": "Mason Hill",
+      "company": "StreamVision",
+      "orderValue": 499,
+      "orderDate": "2023-10-05",
+      "status": "In-progress",
+      "avatar": "/images/Avatar(4).png"
+    },
+    {
+      "id": 18,
+      "name": "Isabella Moore",
+      "company": "CoreFusion",
+      "orderValue": 651,
+      "orderDate": "2023-08-21",
+      "status": "Completed",
+      "avatar": "/images/Avatar(5).png"
+    },
+    {
+      "id": 19,
+      "name": "James White",
+      "company": "NextEra Solutions",
+      "orderValue": 388,
+      "orderDate": "2023-06-25",
+      "status": "New",
+      "avatar": "/images/Avatar313.png"
+    },
+    {
+      "id": 20,
+      "name": "Mia Johnson",
+      "company": "WaveTech",
+      "orderValue": 720,
+      "orderDate": "2023-07-17",
+      "status": "Completed",
+      "avatar": "/images/Avatar(1).png"
+    },
+    {
+      "name": "Nguyen Thi My Nhan",
+      "company": "Galaxy",
+      "orderValue": "357",
+      "orderDate": "2024-07-31",
+      "status": "new",
+      "avatar": "/images/Avatar.png",
+      "id": 21
+    },
+    {
+      "name": "Phạm Cồng Thành",
+      "company": "Galaxy",
+      "orderValue": "500",
+      "orderDate": "2024-07-31",
+      "status": "New",
+      "avatar": "/images/Avatar.png",
+      "id": 22
+    },
+    {
+      "id": 23,
+      "name": "Hoàng Sơn",
+      "company": "Viettel solutionsolution",
+      "orderValue": "600",
+      "orderDate": "2023-04-24",
+      "status": "New",
+      "avatar": "/images/Avatar.png"
+    },
+    {
+      "id": 24,
+      "name": "Hoàng Sơn",
+      "company": "Viettel solutionsolution",
+      "orderValue": "600",
+      "orderDate": "2023-05-24",
+      "status": "New",
+      "avatar": "/images/Avatar.png"
+    },
+    {
+      "id": 25,
+      "name": "Hoàng Sơn",
+      "company": "Viettel solutionsolution",
+      "orderValue": "600",
+      "orderDate": "2023-06-24",
+      "status": "New",
+      "avatar": "/images/Avatar.png"
+    },
+    {
+      "id": 26,
+      "name": "Hoàng Sơn",
+      "company": "Viettel solutionsolution",
+      "orderValue": "600",
+      "orderDate": "2023-07-24",
+      "status": "New",
+      "avatar": "/images/Avatar.png"
+    }
+  ]
+}
